@@ -1,7 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
   #map.resources :posts
   map.resources :posts, :has_many => :comments
-  map.root :controller => "home"
+  map.root :controller => "users"
+  map.resources :users, :has_many => :posts
   
   # The priority is based upon order of creation: first created -> highest priority.
 
@@ -44,6 +45,4 @@ ActionController::Routing::Routes.draw do |map|
   # consider removing or commenting them out if you're using named routes and resources.
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
-  map.root :controller => "home"
-  map.resources :posts, :has_many => :comments
 end

@@ -1,9 +1,3 @@
-body {
- background-color: #fff;
- background:url("../images/background.png") repeat-x bottom #fff;
- width: 100%;
- height: 900px;
- }
 
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
@@ -11,7 +5,17 @@ body, p, ol, ul, td {
   line-height: 18px;
 }
 #content{
-  width:800px;
+  min-width:400px;
+  min-height: 400px;
+  margin: 40px auto;
+  background-color: #FFFFFF;
+  padding:50px;
+  box-shadow: 0 0 30px #3366FF;
+  text-align: center;
+} 
+#Blog_area{
+ float:left;
+  width:400px;
   min-height: 400px;
   margin: 40px auto;
   background-color: #FFFFFF;
