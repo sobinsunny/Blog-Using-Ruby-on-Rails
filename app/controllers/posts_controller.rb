@@ -1,12 +1,8 @@
 class PostsController < ApplicationController
 before_filter :find_post, :only => [:show, :edit, :update, :destroy]
   def index
-    @posts = Post.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @posts }
-    end
+    @user=User.find(params[:user_id])
+    @posts = @user.posts
   end
 
   # GET /posts/1
@@ -22,6 +18,7 @@ before_filter :find_post, :only => [:show, :edit, :update, :destroy]
   # GET /posts/new
   # GET /posts/new.xml
   def new
+    @user=User.find(params[:id])
     @post = Post.new
 
     respond_to do |format|

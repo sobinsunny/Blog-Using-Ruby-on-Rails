@@ -1,8 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
   #map.resources :posts
+  map.root :controller => 'users',:action =>'login'
+  map.resources :users,:collection=>{:login=>[:get,:post]}
   map.resources :posts, :has_many => :comments
-  map.root :controller => "users"
-  map.resources :users, :has_many => :posts
+  
   
   # The priority is based upon order of creation: first created -> highest priority.
 

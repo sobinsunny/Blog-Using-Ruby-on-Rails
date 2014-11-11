@@ -2,6 +2,7 @@
 <div id="content">
 <% form_for(@post) do |f| %>
 <%= f.error_messages %> 
+<%=f.hidden_field :user_id,:value=>params[:id]%>
 <p> <%= f.label :name %><br /> 
 <%= f.text_field :name %> 
 </p> <p> <%= f.label :title, "title" %>

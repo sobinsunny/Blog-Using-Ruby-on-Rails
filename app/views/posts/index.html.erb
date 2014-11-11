@@ -21,4 +21,4 @@
                         <% end %>
                     </table>
                     <br/>
-<%= link_to 'New post', new_post_path %>
+<%= link_to 'New post', :controller=>'posts',:action=>"new",:id=>@user.id%>
